@@ -1,0 +1,4 @@
+bookdown::gitbook:
+  split_by: chapter
+  number_sections: true
+  toc: true

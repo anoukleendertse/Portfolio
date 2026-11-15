@@ -1,0 +1,12 @@
+book_filename: "Portfolio"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Hoofdstuk "
+rmd_files:
+  - index.Rmd
+  - 01-CV.Rmd
+  - 02-projects.Rmd
+  - 03-data-analysis.Rmd
+  - 04-reflection.Rmd
+  - 05-future-goals.Rmd

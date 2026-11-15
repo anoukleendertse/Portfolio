@@ -1,0 +1,13 @@
+---
+title: "Portfolio"
+author: "Anouk Leendertse"
+site: "bookdown::bookdown_site"
+output:
+  bookdown::gitbook: default
+---
+
+# Welkom {-}
+
+Welkom bij mijn portfolio!
+In dit portfolio vind je meer informatie over mijn opleiding,
+vaardigheden en projecten.

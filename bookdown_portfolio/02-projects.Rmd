@@ -1,0 +1,8 @@
+---
+title: "02-projects"
+output: html_document
+---
+
+# Projects {-}
+
+Concrete projecten en opdrachten die je hebt uitgevoerd

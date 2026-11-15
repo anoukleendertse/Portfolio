@@ -1,0 +1,41 @@
+---
+title: "05-future-goals"
+output: html_document
+---
+
+# Furure goals {-}
+
+### 1. Where would I like to work in 1 or 2 years? What would my dream job look like? {-}
+In one or two years, I would like to work in a position related to data science, bioinformatics or computational biology. Ideally, I would work at a research institute, hospital or biotechnology company where I can combine my background in biology with my interest in data analysis.
+
+My dream job would involve analysing biological and medical datasets, identifying patterns and interpreting results to answer scientific questions. I am particularly interested in gene expression analysis and single-cell RNA sequencing. I would enjoy working with large datasets and using programming languages such as R and Python to gain new insights from biological data.
+
+### 2. What is my current position regarding the skills needed for this job? Which skills do I already have? {-}
+I am currently a third-year student of Biology and Medical Laboratory Research at Hogeschool Utrecht. During my studies, I have discovered that my main interest lies in data science rather than laboratory work.
+
+I already have experience with several relevant skills:
+- R programming: using R for data processing, analysis and visualisation.
+- Gene expression analysis: performing differential gene expression analysis and interpreting results.
+- Single-cell RNA sequencing: independently analysing datasets using the Seurat 
+package.
+- Statistical analysis: applying statistical methods to biological datasets.
+- Data visualisation: creating graphs and visualisations to communicate 
+
+results.
+- Microsoft Office: working with Excel and Word.
+Additionally, my work experience has helped me develop communication, teamwork, problem-solving and independent working skills.
+
+### 3. Which skills would I still need or like to learn? {-}
+To prepare myself for a future career in data science or bioinformatics, I would like to develop several additional skills:
+- Python programming: expanding my programming knowledge beyond R.
+- Machine learning: learning how to apply machine learning techniques to 
+
+biological datasets.
+- Advanced R programming: writing more efficient and reproducible code.
+- Advanced bioinformatics: gaining more experience with complex biological 
+
+datasets and analysis methods.
+- Statistical modelling: improving my knowledge of statistical methods.
+- Data visualisation: developing more advanced ways to present complex data.
+
+I would particularly like to learn Python and machine learning because these skills could help me analyse larger and more complex datasets in the future.
