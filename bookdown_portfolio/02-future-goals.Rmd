@@ -1,9 +1,9 @@
 ---
-title: "05-future-goals"
+title: "02-future-goals"
 output: html_document
 ---
 
-# Furure goals {-}
+# Future goals {-}
 
 ### 1. Where would I like to work in 1 or 2 years? What would my dream job look like? {-}
 In one or two years, I would like to work in a position related to data science, bioinformatics or computational biology. Ideally, I would work at a research institute, hospital or biotechnology company where I can combine my background in biology with my interest in data analysis.

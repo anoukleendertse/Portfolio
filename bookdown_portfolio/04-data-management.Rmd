@@ -1,5 +1,33 @@
 ---
-title: "03-data-analysis"
+title: "04-data-management"
 output: html_document
 ---
+# datastructuur {-}
+
+### 3a {-}
+```{r screenshot, echo=FALSE, out.width="30%", fig.align="left"}
+knitr::include_graphics("images/dir_tree_opdr3a.png")
+```
+
+```{r screenshot2, echo=FALSE, out.width="30%", fig.align="left"}
+knitr::include_graphics("images/README_screenshot_opdr3a.png")
+```
+
+```{r screenshot3, echo=FALSE, out.width="30%", fig.align="left"}
+knitr::include_graphics("images/README_screenshot_opdr3a.png")
+```
+
+### 3b {-}
+
+```{r screenshot4, echo=FALSE, out.width="30%", fig.align="left"}
+knitr::include_graphics("images/portfolio_dirtree3.png")
+```
+
+```{r screenshot5, echo=FALSE, out.width="30%", fig.align="left"}
+knitr::include_graphics("images/portfolio_dirtree4.png")
+```
+
+```{r}
+readLines("README.txt")
+```
 
