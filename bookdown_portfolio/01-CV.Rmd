@@ -29,7 +29,7 @@ library(vitae)
 
 My name is Anouk Leendertse, and I am a third-year student of Biology and Medical Laboratory Research at the University of Applied Sciences Utrecht (Hogeschool Utrecht).
 
-Although my educational background is in biology, my main interest lies in data science and data analysis. I enjoy working with data, exploring patterns and using programming tools such as R to analyse and interpret information.
+Although my educational background is mainly in lab-biology, my main interest lies in data science and data analysis. I enjoy working with data, exploring patterns and using programming tools such as R to analyse and interpret information. I have done some work already in R 
 
 Alongside my studies, I have gained several years of work experience in retail. These experiences have helped me develop strong communication skills, a sense of responsibility and the ability to work effectively in a team.
 
@@ -41,8 +41,19 @@ I am eager to further develop my skills in data science and gain practical exper
 education <- tibble::tribble(
   ~Degree, ~Year, ~Institution, ~Location,
   "Biology and Medical Laboratory Research",
-  "[Start year] - Present",
+  "2024 - Present",
   "Hogeschool Utrecht",
+  "Utrecht, The Netherlands"
+)
+
+knitr::kable(education)
+```
+
+```{r, leidsche rijn college}
+education2 <- tibble::tribble(
+  ~Year, ~Institution, ~Location,
+  "2019 - 2024",
+  "Leidsche Rijn College",
   "Utrecht, The Netherlands"
 )
 
@@ -80,6 +91,7 @@ Programming and data analysis
 - Data manipulation and analysis
 - Data visualisation
 Software
+- R
 - Microsoft Excel
 - Microsoft Word
 - Microsoft Office
@@ -88,12 +100,11 @@ Software
 
 - Analytical thinking
 - Problem-solving
-- Teamwork and collaboration
-- Communication
-- Responsibility
-- Adaptability
+- Communication skills
+- proactive
 - Attention to detail
 - Willingness to learn
+- Self-motivation
 
 ## Languages {-}
 
