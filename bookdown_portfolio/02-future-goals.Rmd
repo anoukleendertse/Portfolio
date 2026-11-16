@@ -6,24 +6,24 @@ output: html_document
 # Future goals {-}
 
 ### 1. Where would I like to work in 1 or 2 years? What would my dream job look like? {-}
-In one or two years, I would like to work in a position related to data science, bioinformatics or computational biology. Ideally, I would work at a research institute, hospital or biotechnology company where I can combine my background in biology with my interest in data analysis.
+In one or two years, I would like to work in a position where I can combine my background in biology with data science and healthcare. I am interested in opportunities within bioinformatics, genomics or healthcare data science, for example at a research institute, university, hospital or biotechnology company.
 
-My dream job would involve analysing biological and medical datasets, identifying patterns and interpreting results to answer scientific questions. I am particularly interested in gene expression analysis and single-cell RNA sequencing. I would enjoy working with large datasets and using programming languages such as R and Python to gain new insights from biological data.
+My dream job would involve analysing biological and medical datasets, identifying patterns and interpreting results to answer scientific questions. I am also interested in gene expression analysis and machine learning, as well as analysing medical data to discover patterns and relationships related to the development and progression of diseases. I would enjoy working with large datasets and using programming languages such as R and Python to gain new insights into biological processes and human health.
 
 ### 2. What is my current position regarding the skills needed for this job? Which skills do I already have? {-}
-I am currently a third-year student of Biology and Medical Laboratory Research at Hogeschool Utrecht. During my studies, I have discovered that my main interest lies in data science rather than laboratory work.
+I am currently a third-year student of Biology and Medical Laboratory Research at Hogeschool Utrecht. During my studies, I have discovered that my main interest lies in data science and data analysis rather than laboratory work.
 
-I already have experience with several relevant skills:
-- R programming: using R for data processing, analysis and visualisation.
-- Gene expression analysis: performing differential gene expression analysis and interpreting results.
-- Single-cell RNA sequencing: independently analysing datasets using the Seurat 
-package.
-- Statistical analysis: applying statistical methods to biological datasets.
-- Data visualisation: creating graphs and visualisations to communicate 
+I have already gained experience with several skills that are relevant to my future career:
 
-results.
-- Microsoft Office: working with Excel and Word.
-Additionally, my work experience has helped me develop communication, teamwork, problem-solving and independent working skills.
+- R programming: Using R for data processing, analysis and visualisation.
+- Gene expression analysis: Performing differential gene expression analysis and interpreting the results.
+- Single-cell RNA sequencing: Independently analysing datasets using the Seurat package in R.
+- Statistical analysis: Applying statistical methods to biological datasets.
+- Data visualisation: Creating graphs and visualisations to present and communicate results.
+- Microsoft Office: Working with programs such as Excel, Word and Teams.
+
+In addition to my technical skills, my work experience has helped me develop communication, teamwork, problem-solving and independent working skills.
+Although I already have a good foundation in biological data analysis (R), I would like to further develop my programming skills, particularly in Python, as well as gain more experience with machine learning and larger biological and medical datasets.
 
 ### 3. Which skills would I still need or like to learn? {-}
 To prepare myself for a future career in data science or bioinformatics, I would like to develop several additional skills:
@@ -33,9 +33,5 @@ To prepare myself for a future career in data science or bioinformatics, I would
 biological datasets.
 - Advanced R programming: writing more efficient and reproducible code.
 - Advanced bioinformatics: gaining more experience with complex biological 
-
-datasets and analysis methods.
-- Statistical modelling: improving my knowledge of statistical methods.
-- Data visualisation: developing more advanced ways to present complex data.
 
 I would particularly like to learn Python and machine learning because these skills could help me analyse larger and more complex datasets in the future.
