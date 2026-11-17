@@ -23,7 +23,7 @@ knitr::include_graphics("images/portfolio_dirtree3.png")
 knitr::include_graphics("images/portfolio_dirtree4.png")
 ```
 
-```{r}
-readLines("README.txt")
+```{r, readme}
+readLines("../README.md")
 ```
 

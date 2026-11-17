@@ -128,17 +128,17 @@ link: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.101
 
 *onderzoeksvraag:* 'We aim to compare influenza’s epidemiological characteristics between pre-pandemic and post-pandemic periods to inform public health responses.'
 
-*Samenvatting van methode en resultaten:* {-}
+*Samenvatting van methode en resultaten:* 
 
-*Methode:* {-}
+*Methode:* 
 De onderzoekers in dit onderzoek maakte twee verschillende wiskundige modellen om de verspreiding en de sterfte van influenza te onderzoeken. Het eerste model verdeelt de bevolking in drie leftijdscatogorien: 0-17 jaar, 18-64 jaar en 65 jaar en ouder. Het tweede model onderzocht het verschil tussen influenza A en B.
 De onderzoekers gebruikte hierbij openbare Amerikaanse gegevens over influenza-ziekenhuisopnames, sterfte en ook besmittingen uit het seizoen 2016-2019 en 2022-2024. 
 Doormiddel van statistische berekeningen en simulaties schatten ze de overdrachts- en sterftecijfers.
 
-*Resultaten:* {-}
+*Resultaten:* 
 Uit de zesultaten kwam dat de onderzoekers merkte dat de transmissiesnelheden van de griep bij volwassenen tijdelijk daalde tijdens de pandemie, maar binnen een jaar na het versoepelen van de NPI weer terugkeren naar het niveau van vóór de pandemie, terwijl de transmissie bij kinderen stabiel blijft. Het sterftecijfer voor alle leeftijden steeg tijdelijk tijdens de pandemie, waarschijnlijk door verstoringen in de gezondheidszorg, voordat het na de pandemie weer naar het normale niveau terugkeerde. De transmissie van Influenza A nam af tijdens de pandemie, maar herstelt zich daarna, terwijl Influenza B schommelende trends liet zien (Jing en Wang (2025)).
 
-# Beoordeling: {-}
+## Beoordeling {-}
 
 ```{r, tabel van de beoordeling}
 
@@ -188,7 +188,7 @@ kable(
 ```
 Het onderzoek voldoet dus aan de meeste transparantiecriteria's.
 
-# R-code {-}
+## R-code {-}
 
 link naar de code: https://github.com/shuanglinjing/Long-COVID-impact-on-influenza-infectivity-and-fatality/tree/master
 

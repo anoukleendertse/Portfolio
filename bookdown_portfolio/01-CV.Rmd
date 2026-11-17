@@ -37,7 +37,7 @@ I am eager to further develop my skills in data science and gain practical exper
 
 ## Education {-}
 
-```{r}
+```{r, education}
 education <- tibble::tribble(
   ~Degree, ~Year, ~Institution, ~Location,
   "Biology and Medical Laboratory Research",

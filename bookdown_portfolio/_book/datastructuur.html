@@ -97,7 +97,19 @@
 <li class="chapter" data-level="" data-path="datastructuur.html"><a href="datastructuur.html#a"><i class="fa fa-check"></i>3a</a></li>
 <li class="chapter" data-level="" data-path="datastructuur.html"><a href="datastructuur.html#b"><i class="fa fa-check"></i>3b</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html"><i class="fa fa-check"></i>Reproducible-science</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html"><i class="fa fa-check"></i>Reproducible-science</a>
+<ul>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#a-1"><i class="fa fa-check"></i>4a</a>
+<ul>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#het-nut-van-de-controles-en-wat-ze-zijn"><i class="fa fa-check"></i>Het nut van de controles en wat ze zijn:</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#nut-van-normalisatie"><i class="fa fa-check"></i>Nut van normalisatie</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#stappenplan"><i class="fa fa-check"></i>Stappenplan:</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#bronnen"><i class="fa fa-check"></i>Bronnen</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#b-1"><i class="fa fa-check"></i>4b</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#beoordeling"><i class="fa fa-check"></i>Beoordeling</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#r-code"><i class="fa fa-check"></i>R-code</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i>R-packages</a></li>
 <li class="chapter" data-level="" data-path="bronvermelding.html"><a href="bronvermelding.html"><i class="fa fa-check"></i>Bronvermelding</a></li>
 </ul>
@@ -129,76 +141,77 @@
 <h3>3b<a href="datastructuur.html#b" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><img src="images/portfolio_dirtree3.png" alt="" width="30%" style="display: block; margin: auto auto auto 0;" /></p>
 <p><img src="images/portfolio_dirtree4.png" alt="" width="30%" style="display: block; margin: auto auto auto 0;" /></p>
-<pre><code>##  [1] &quot;Project: Portfolio&quot;                                                                                  
-##  [2] &quot;Cursus: DSFB2&quot;                                                                                       
-##  [3] &quot;Docenten: Bas van Gestel, Chris van Oevelen, René van der Ploeg en Michael Liem&quot;                     
-##  [4] &quot;&quot;                                                                                                    
-##  [5] &quot;PROJECTSTRUCTUUR&quot;                                                                                    
-##  [6] &quot;&quot;                                                                                                    
-##  [7] &quot;De projectmap is als volgt georganiseerd (zie ook 04-data-management.Rmd):&quot;                          
-##  [8] &quot;&quot;                                                                                                    
-##  [9] &quot;bookdown_portfolio/&quot;                                                                                 
-## [10] &quot;│&quot;                                                                                                   
-## [11] &quot;├── 01-CV.Rmd&quot;                                                                                       
-## [12] &quot;├── 02-future-goals.Rmd&quot;                                                                             
-## [13] &quot;├── 03-vrijeopdr.Rmd&quot;                                                                                
-## [14] &quot;├── 04-data-management.Rmd&quot;                                                                          
-## [15] &quot;├── 05-reproducible-science.Rmd&quot;                                                                     
-## [16] &quot;├── 06-R-package.Rmd&quot;                                                                                
-## [17] &quot;├── 07-bronvermelding.Rmd&quot;                                                                           
-## [18] &quot;│&quot;                                                                                                   
-## [19] &quot;├── images/&quot;                                                                                         
-## [20] &quot;│   ├── dir_tree_opdr3a.png&quot;                                                                         
-## [21] &quot;│   ├── portfolio_dirtree2.png&quot;                                                                      
-## [22] &quot;│   ├── profielfoto.jpg&quot;                                                                             
-## [23] &quot;│   └── README_screenshot_opdr3a.png&quot;                                                                
-## [24] &quot;│&quot;                                                                                                   
-## [25] &quot;├── index.Rmd&quot;                                                                                       
-## [26] &quot;├── packages.bib&quot;                                                                                    
-## [27] &quot;├── bookdown.Rproj&quot;                                                                                  
-## [28] &quot;├── _bookdown.yml&quot;                                                                                   
-## [29] &quot;├── _output.yml&quot;                                                                                     
-## [30] &quot;└── _book/&quot;                                                                                          
-## [31] &quot;&quot;                                                                                                    
-## [32] &quot;INHOUD VAN HET PORTFOLIO&quot;                                                                            
-## [33] &quot;&quot;                                                                                                    
-## [34] &quot;Het portfolio bestaat uit de volgende onderdelen:&quot;                                                   
-## [35] &quot;&quot;                                                                                                    
-## [36] &quot;01-CV.Rmd -)                   Curriculum vitae&quot;                                                     
-## [37] &quot;02-future-goals.Rmd -)         toekomstige doelen en ambities&quot;                                       
-## [38] &quot;03-vrijeopdr.Rmd -)            Vrije opdracht&quot;                                                       
-## [39] &quot;04-data-management.Rmd -)      Opdracht over datamanagement&quot;                                         
-## [40] &quot;05-reproducible-science.Rmd -) Opdracht over reproduceerbare wetenschap&quot;                             
-## [41] &quot;06-R-package.Rmd -)            Opdracht over R-packages&quot;                                             
-## [42] &quot;07-bronvermelding.Rmd -)       Bronnen en literatuur&quot;                                                
-## [43] &quot;&quot;                                                                                                    
-## [44] &quot;BESTANDSBESCHRIJVINGEN&quot;                                                                              
-## [45] &quot;&quot;                                                                                                    
-## [46] &quot;R Markdown-bestanden (.Rmd): bevatten de hoofdstukken en inhoud van het portfolio.&quot;                  
-## [47] &quot;index.Rmd: bevat de introductie en vormt het startpunt van het Bookdown-project.&quot;                    
-## [48] &quot;images/: bevat afbeeldingen die in het portfolio worden gebruikt.&quot;                                   
-## [49] &quot;packages.bib: bevat bibliografische referenties.&quot;                                                    
-## [50] &quot;_bookdown.yml: bevat de configuratie en volgorde van de hoofdstukken.&quot;                               
-## [51] &quot;_output.yml: bevat de instellingen voor de uitvoer van het boek.&quot;                                    
-## [52] &quot;bookdown.Rproj: het RStudio-projectbestand.&quot;                                                         
-## [53] &quot;_book/: bevat de gegenereerde HTML-versie van het portfolio.&quot;                                        
-## [54] &quot;&quot;                                                                                                    
-## [55] &quot;HET PORTFOLIO RENDEREN&quot;                                                                              
-## [56] &quot;&quot;                                                                                                    
-## [57] &quot;Het project kan worden geopend in RStudio door bookdown.Rproj te openen.&quot;                            
-## [58] &quot;Om het volledige portfolio opnieuw te genereren, gebruik je in de R-console: bookdown::render_book()&quot;
-## [59] &quot;Bookdown genereert vervolgens de HTML-bestanden in de map _book/.&quot;                                   
-## [60] &quot;&quot;                                                                                                    
-## [61] &quot;GEBRUIKTE TECHNOLOGIEN&quot;                                                                              
-## [62] &quot;&quot;                                                                                                    
-## [63] &quot;- R&quot;                                                                                                 
-## [64] &quot;- RStudio&quot;                                                                                           
-## [65] &quot;- R Markdown&quot;                                                                                        
-## [66] &quot;- Bookdown&quot;                                                                                          
-## [67] &quot;- Git (voor versiebeheer)&quot;                                                                           
-## [68] &quot;- Auteur&quot;                                                                                            
+<pre><code>##  [1] &quot;# Portfolio&quot;                                                                                         
+##  [2] &quot;Project: Portfolio&quot;                                                                                  
+##  [3] &quot;Cursus: DSFB2&quot;                                                                                       
+##  [4] &quot;Docenten: Bas van Gestel, Chris van Oevelen, René van der Ploeg en Michael Liem&quot;                     
+##  [5] &quot;&quot;                                                                                                    
+##  [6] &quot;PROJECTSTRUCTUUR&quot;                                                                                    
+##  [7] &quot;&quot;                                                                                                    
+##  [8] &quot;De projectmap is als volgt georganiseerd (zie ook 04-data-management.Rmd):&quot;                          
+##  [9] &quot;&quot;                                                                                                    
+## [10] &quot;bookdown_portfolio/&quot;                                                                                 
+## [11] &quot;│&quot;                                                                                                   
+## [12] &quot;├── 01-CV.Rmd&quot;                                                                                       
+## [13] &quot;├── 02-future-goals.Rmd&quot;                                                                             
+## [14] &quot;├── 03-vrijeopdr.Rmd&quot;                                                                                
+## [15] &quot;├── 04-data-management.Rmd&quot;                                                                          
+## [16] &quot;├── 05-reproducible-science.Rmd&quot;                                                                     
+## [17] &quot;├── 06-R-package.Rmd&quot;                                                                                
+## [18] &quot;├── 07-bronvermelding.Rmd&quot;                                                                           
+## [19] &quot;│&quot;                                                                                                   
+## [20] &quot;├── images/&quot;                                                                                         
+## [21] &quot;│   ├── dir_tree_opdr3a.png&quot;                                                                         
+## [22] &quot;│   ├── portfolio_dirtree2.png&quot;                                                                      
+## [23] &quot;│   ├── profielfoto.jpg&quot;                                                                             
+## [24] &quot;│   └── README_screenshot_opdr3a.png&quot;                                                                
+## [25] &quot;│&quot;                                                                                                   
+## [26] &quot;├── index.Rmd&quot;                                                                                       
+## [27] &quot;├── packages.bib&quot;                                                                                    
+## [28] &quot;├── bookdown.Rproj&quot;                                                                                  
+## [29] &quot;├── _bookdown.yml&quot;                                                                                   
+## [30] &quot;├── _output.yml&quot;                                                                                     
+## [31] &quot;└── _book/&quot;                                                                                          
+## [32] &quot;&quot;                                                                                                    
+## [33] &quot;INHOUD VAN HET PORTFOLIO&quot;                                                                            
+## [34] &quot;&quot;                                                                                                    
+## [35] &quot;Het portfolio bestaat uit de volgende onderdelen:&quot;                                                   
+## [36] &quot;&quot;                                                                                                    
+## [37] &quot;01-CV.Rmd -)                   Curriculum vitae&quot;                                                     
+## [38] &quot;02-future-goals.Rmd -)         toekomstige doelen en ambities&quot;                                       
+## [39] &quot;03-vrijeopdr.Rmd -)            Vrije opdracht&quot;                                                       
+## [40] &quot;04-data-management.Rmd -)      Opdracht over datamanagement&quot;                                         
+## [41] &quot;05-reproducible-science.Rmd -) Opdracht over reproduceerbare wetenschap&quot;                             
+## [42] &quot;06-R-package.Rmd -)            Opdracht over R-packages&quot;                                             
+## [43] &quot;07-bronvermelding.Rmd -)       Bronnen en literatuur&quot;                                                
+## [44] &quot;&quot;                                                                                                    
+## [45] &quot;BESTANDSBESCHRIJVINGEN&quot;                                                                              
+## [46] &quot;&quot;                                                                                                    
+## [47] &quot;R Markdown-bestanden (.Rmd): bevatten de hoofdstukken en inhoud van het portfolio.&quot;                  
+## [48] &quot;index.Rmd: bevat de introductie en vormt het startpunt van het Bookdown-project.&quot;                    
+## [49] &quot;images/: bevat afbeeldingen die in het portfolio worden gebruikt.&quot;                                   
+## [50] &quot;packages.bib: bevat bibliografische referenties.&quot;                                                    
+## [51] &quot;_bookdown.yml: bevat de configuratie en volgorde van de hoofdstukken.&quot;                               
+## [52] &quot;_output.yml: bevat de instellingen voor de uitvoer van het boek.&quot;                                    
+## [53] &quot;bookdown.Rproj: het RStudio-projectbestand.&quot;                                                         
+## [54] &quot;_book/: bevat de gegenereerde HTML-versie van het portfolio.&quot;                                        
+## [55] &quot;&quot;                                                                                                    
+## [56] &quot;HET PORTFOLIO RENDEREN&quot;                                                                              
+## [57] &quot;&quot;                                                                                                    
+## [58] &quot;Het project kan worden geopend in RStudio door bookdown.Rproj te openen.&quot;                            
+## [59] &quot;Om het volledige portfolio opnieuw te genereren, gebruik je in de R-console: bookdown::render_book()&quot;
+## [60] &quot;Bookdown genereert vervolgens de HTML-bestanden in de map _book/.&quot;                                   
+## [61] &quot;&quot;                                                                                                    
+## [62] &quot;GEBRUIKTE TECHNOLOGIEN&quot;                                                                              
+## [63] &quot;&quot;                                                                                                    
+## [64] &quot;- R&quot;                                                                                                 
+## [65] &quot;- RStudio&quot;                                                                                           
+## [66] &quot;- R Markdown&quot;                                                                                        
+## [67] &quot;- Bookdown&quot;                                                                                          
+## [68] &quot;- Git (voor versiebeheer)&quot;                                                                           
 ## [69] &quot;&quot;                                                                                                    
-## [70] &quot;Dit portfolio is gemaakt als onderdeel van de cursus Biology 2.&quot;</code></pre>
+## [70] &quot;Dit portfolio is gemaakt als onderdeel van de cursus Biology 2.&quot;                                     
+## [71] &quot;&quot;</code></pre>
 
 </div>
 </div>
