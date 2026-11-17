@@ -6,7 +6,7 @@ output:
   bookdown::gitbook: default
 ---
 
-# Welkom {-}
+# Portfolio {-}
 
 Welkom bij mijn portfolio!
 In dit portfolio vind je meer informatie over mijn opleiding,
