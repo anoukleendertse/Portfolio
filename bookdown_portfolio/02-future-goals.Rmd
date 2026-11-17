@@ -1,8 +1,3 @@
----
-title: "02-future-goals"
-output: html_document
----
-
 # Future goals {-}
 
 ### 1. Where would I like to work in 1 or 2 years? What would my dream job look like? {-}
@@ -27,10 +22,12 @@ Although I already have a good foundation in biological data analysis (R), I wou
 
 ### 3. Which skills would I still need or like to learn? {-}
 To prepare myself for a future career in data science or bioinformatics, I would like to develop several additional skills:
+
 - Python programming: expanding my programming knowledge beyond R.
 - Machine learning: learning how to apply machine learning techniques to 
 
 biological datasets.
+
 - Advanced R programming: writing more efficient and reproducible code.
 - Advanced bioinformatics: gaining more experience with complex biological 
 

@@ -1,5 +1,2 @@
----
-title: "06-R-package"
-output: html_document
----
+# R-packages {-}
 

@@ -66,7 +66,6 @@ GEBRUIKTE TECHNOLOGIEN
 - R Markdown
 - Bookdown
 - Git (voor versiebeheer)
-- Auteur
 
 Dit portfolio is gemaakt als onderdeel van de cursus Biology 2.
 

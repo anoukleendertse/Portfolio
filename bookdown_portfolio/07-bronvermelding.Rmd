@@ -1,5 +1,3 @@
----
-title: "bronvermelding"
-output: html_document
----
+# Bronvermelding {-}
 
+Hier komen je bronnen te staan.

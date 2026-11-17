@@ -1,0 +1,120 @@
+# logistic regression leren {-}
+
+
+```{r, data importeren}
+# 1. DATA IMPORT
+
+# Dataset importeren
+data <- read.csv("your_dataset.csv")
+
+# Bekijk de dataset
+head(data)
+str(data)
+summary(data)
+```
+
+Hier word de dataset geimporteerd en bekeken.
+
+```{r, data preprocessing}
+# 2. DATA PREPROCESSING
+
+# Controleer missende waarden
+colSums(is.na(data))
+
+# bekijk hoeveel waarden er wegvallen als je de NA waarden weghaalt. als dit er te veel zijn laat dit dan staan en doe niet de onderstaande code met na.omit.
+
+# Verwijder observaties met missende waarden
+data <- na.omit(data)
+
+# Zorg dat de targetvariabele een factor is
+data$target <- factor(data$target,
+                      levels = c(0, 1))
+```
+
+Hier controleren we de dataset voor verdere analyse.
+
+```{r, trainen}
+# 3. TRAIN / TEST SPLIT
+
+set.seed(123)
+
+# 80% training, 20% testing
+train_index <- sample(
+  seq_len(nrow(data)),
+  size = floor(0.8 * nrow(data) # door floor kijg je een geheel getal
+))
+
+train_data <- data[train_index, ]
+test_data <- data[-train_index, ]
+```
+
+Hier word het model 'LR' getraint. Er word gebruik gemaakt van Stratified sampling.
+
+```{r, LR model}
+# 4. LOGISTIC REGRESSION MODEL
+
+model <- glm(
+  target ~ age + smoking + tumor_size, # selecteer hier de colommen die je wilt gebruiken
+  data = train_data,
+  family = binomial(link = "logit") # specificeert de binaire uitkomst. # specificeert de logit-linkfunctie.
+)
+
+# Bekijk modelresultaten
+summary(model)
+```
+
+Hier word de LR uitgevoerd. De punt (.) betekent dat alle overige kolommen als voorspellers worden gebruikt.
+
+```{r, kansen}
+# 5. PREDICTIONS
+
+# Voorspel kansen op de testdata
+predicted_probabilities <- predict(
+  model,
+  newdata = test_data,
+  type = "response"
+)
+
+# Zet kansen om in classificaties
+predicted_classes <- ifelse(
+  predicted_probabilities >= 0.5,
+  1,
+  0
+)
+
+predicted_classes <- factor(
+  predicted_classes,
+  levels = c(0, 1)
+)
+```
+
+
+
+```{r, model evalueren}
+# 6. MODEL EVALUATION
+
+# Confusion matrix
+confusion_matrix <- table(
+  Actual = test_data$target,
+  Predicted = predicted_classes
+)
+# begrijpen hoe je beoordeelt of je model goed voorspelt.
+
+print(confusion_matrix)
+
+# Accuracy
+accuracy <- mean(
+  predicted_classes == test_data$target
+)
+
+print(accuracy)
+```
+
+
+
+```{r, odds}
+# Odds Ratios
+exp(coef(model))
+```
+
+Hier zie je hoe veranderingen in voorspellers samenhangen met de odds op de positieve uitkomst.

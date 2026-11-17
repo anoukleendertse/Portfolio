@@ -1,5 +1,196 @@
----
-title: "05-reproducible-science"
-output: html_document
----
+# Reproducible-science {-}
+
+## 4a {-}
+```{r, inlezen}
+library(readxl)
+library(tidyverse)
+library(ggplot2)
+
+# Lees de data in met readxl
+data <- read_excel("ruwe_data/CE.LIQ.FLOW.062_Tidydata.xlsx")
+
+# voor de zekerheid zet compConcentration als numiric
+data$compConcentration <- as.numeric(data$compConcentration)
+str(data$compConcentration)
+
+class(data$compConcentration)
+# bekijk de dataset, is alles goed ingelezen
+head(data)
+str(data)
+summary(data)
+```
+
+kijk of as.factor nodig is en als de concentratie als tekst is ingelezen, moet je deze eerst omzetten naar een numerieke variabele.
+
+```{r, scaterplot}
+# een scaterplot om het aantal nakomelingen en concentratie van de chemicalien te zien
+
+ggplot(data %>% filter(compConcentration > 0), # van 0 waarden kan je geen log(10) doen vandaar deze aanpassing op de code
+       aes(x = compConcentration,
+           y = RawData,
+           color = compName,
+           shape = expType)) +
+  geom_jitter(width = 0.1, height = 0.1) +
+  scale_x_log10() +
+  labs(
+    x = "Concentratie (log10)",
+    y = "Aantal nakomelingen",
+    color = "Chemicalie",
+    shape = "Experimentele conditie"
+  ) +
+  theme_bw()
+```
+
+```{r, normaliseren}
+# Hier word de data genormaliseerd voor verdere analyse
+
+negative_mean <- data %>%
+  filter(expType == "controlNegative") %>%
+  summarise(mean_value = mean(RawData, na.rm = TRUE)) %>%
+  pull(mean_value)
+# Je gebruikt hier de negatieve controle (controlNegative) als referentie. Eerst wordt het gemiddelde van alle metingen van de negatieve controle berekend. Vervolgens worden alle meetwaarden gedeeld door dit gemiddelde. dan krijgt de negatieve controle gemiddeld de waarde 1 en worden de overige meetwaarden uitgedrukt als een verhouding ten opzichte van de negatieve controle, dus die nr. 1. Zo kunnen de effecten van de verschillen beter met elkaar vergeleken worden.
+
+data <- data %>%
+  mutate(normalizedData = RawData / negative_mean)
+```
+
+```{r, scaterplot met lognormalisatie}
+# nu maak je hier ook een scaterplot van, dit is dan na de normalisatie
+
+ggplot(data %>% filter(compConcentration > 0),
+       aes(x = compConcentration,
+           y = normalizedData,
+           color = compName,
+           shape = expType)) +
+  geom_jitter(width = 0.1, height = 0.1) +
+  scale_x_log10() +
+  labs(
+    x = "Concentratie (log10)",
+    y = "Genormaliseerd aantal nakomelingen",
+    color = "Chemicalie",
+    shape = "Experimentele conditie"
+  ) +
+  theme_bw()
+```
+
+### Het nut van de controles en wat ze zijn: {-}
+```{r, controles}
+# hier kunnen we kijken hoeveel controles we hebben en waar ze uit bestaan
+
+unique(data$expType)
+
+data %>%
+  group_by(expType, compName, compConcentration) %>%
+  summarise(
+    aantal_metingen = n(),
+    gemiddelde = mean(RawData, na.rm = TRUE),
+    .groups = "drop"
+  )
+```
+
+*Negatieve controle:*
+De negatieve controle bestaat uit S-medium zonder toegevoegde chemische stof. Dit is de referentie waarmee je kunt bepalen hoe de wormen zich normaal ontwikkelen.
+
+*Positieve controle:*
+De positieve controle bestaat uit ethanol met een concentratie van 1,50. Deze controle wordt gebruikt om te controleren of het experiment een bekend effect kan aantonen.
+
+*Vehicle controle:*
+De vehicle controle bestaat uit ethanol met een concentratie van 0,50. Ethanol wordt hier gebruikt als oplosmiddel. Deze controle laat zien of het oplosmiddel zelf invloed heeft op de wormen.
+
+### Nut van normalisatie {-}
+Door de gegevens te normaliseren ten opzichte van de negatieve controle, kun je de resultaten gemakkelijker met elkaar vergelijken.
+De negatieve controle krijgt de waarde 1. Alle andere meetwaarden worden uitgedrukt als een verhouding ten opzichte van deze controle.
+Hierdoor kun je beter zien of een chemische stof zorgt voor een afname of toename van het aantal nakomelingen.
+
+### Stappenplan: {-}
+1. Installeer en laad het package drc.
+2. Importeer de dataset en controleer de gegevens.
+3. Selecteer het chemicalie dat je wilt onderzoeken.
+4. Gebruik de concentraties als onafhankelijke variabele en de genormaliseerde meetwaarden als afhankelijke variabele.
+5. Maak een dose-response model met drm().
+6. Gebruik een log-logistisch model, bijvoorbeeld LL.4().
+7. Bekijk de dose-response curve.
+8. Bereken de IC50 met ED().
+9. Controleer of het model goed bij de gegevens past.
+10. Rapporteer de resultaten en eventuele onzekerheden
+11. Schrijf een deelconclusie
+
+### Bronnen {-}
+1. https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146021
+2. https://lesmaterialen.rstudio.hu.nl/workflows-reader/represintro.html
+3. OpenAI. (2026). ChatGPT (GPT-6) [Generatieve AI]. https://chatgpt.com/
+Voor het samenvatten en verduidelijken van de lesstof is gebruikgemaakt van ChatGPT (OpenAI, 2026).
+
+## 4b {-}
+
+Jing, S., & Wang, H. (2025). Infectivity and fatality of influenza in pre- and post-COVID-19 pandemic year. PLOS Computational Biology, 21(7), e1013229.
+link: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1013229
+
+*onderzoeksvraag:* 'We aim to compare influenza’s epidemiological characteristics between pre-pandemic and post-pandemic periods to inform public health responses.'
+
+*Samenvatting van methode en resultaten:* {-}
+
+*Methode:* {-}
+De onderzoekers in dit onderzoek maakte twee verschillende wiskundige modellen om de verspreiding en de sterfte van influenza te onderzoeken. Het eerste model verdeelt de bevolking in drie leftijdscatogorien: 0-17 jaar, 18-64 jaar en 65 jaar en ouder. Het tweede model onderzocht het verschil tussen influenza A en B.
+De onderzoekers gebruikte hierbij openbare Amerikaanse gegevens over influenza-ziekenhuisopnames, sterfte en ook besmittingen uit het seizoen 2016-2019 en 2022-2024. 
+Doormiddel van statistische berekeningen en simulaties schatten ze de overdrachts- en sterftecijfers.
+
+*Resultaten:* {-}
+Uit de zesultaten kwam dat de onderzoekers merkte dat de transmissiesnelheden van de griep bij volwassenen tijdelijk daalde tijdens de pandemie, maar binnen een jaar na het versoepelen van de NPI weer terugkeren naar het niveau van vóór de pandemie, terwijl de transmissie bij kinderen stabiel blijft. Het sterftecijfer voor alle leeftijden steeg tijdelijk tijdens de pandemie, waarschijnlijk door verstoringen in de gezondheidszorg, voordat het na de pandemie weer naar het normale niveau terugkeerde. De transmissie van Influenza A nam af tijdens de pandemie, maar herstelt zich daarna, terwijl Influenza B schommelende trends liet zien (Jing en Wang (2025)).
+
+# Beoordeling: {-}
+
+```{r, tabel van de beoordeling}
+
+library(knitr)
+
+# beoordeling doormiddel van de tabel in de opdracht/reader
+
+beoordeling <- data.frame(
+  Criterium = c(
+    "Study Purpose",
+    "Data Availability Statement",
+    "Data Location",
+    "Study Location",
+    "Author Review",
+    "Ethics Statement",
+    "Funding Statement",
+    "Code Availability"
+  ),
+  Beoordeling = c(
+    "Yes",
+    "Yes",
+    "GitHub",
+    "Yes - Verenigde Staten",
+    "Professioneel",
+    "No - niet aangetroffen",
+    "Yes",
+    "Yes volgens verklaring; praktische beschikbaarheid controleren"
+  ),
+  Onderbouwing = c(
+    "Het onderzoeksdoel wordt beschreven in de laatste alinea van de Introduction. De onderzoekers willen de invloed van COVID-19 op de overdracht en sterfte van influenza onderzoeken. (Introduction, alinea 6).",
+    "Het artikel bevat een aparte sectie Data Availability waarin staat dat de code en data beschikbaar zijn via GitHub. (Data Availability).",
+    "De auteurs verwijzen naar een GitHub-repository waarin de gebruikte code en data beschikbaar zouden moeten zijn. (Data Availability).",
+    "De onderzoekers hebben Amerikaanse gegevens gebruikt. (Methods - Data collection).",
+    "De corresponderende auteur Hao Wang vermeldt een professioneel e-mailadres van de University of Alberta. (Auteursgegevens).",
+    "Er is geen afzonderlijke ethische verklaring aangetroffen. (Verklaringen onder de Author summary).",
+    "Er is een aparte financieringsverklaring opgenomen waarin onderzoeksfinanciering uit Canada en China wordt genoemd. (Funding).",
+    "De auteurs geven aan dat de code beschikbaar is via GitHub. De daadwerkelijke aanwezigheid en volledigheid van de scripts moet afzonderlijk worden gecontroleerd. (Data Availability)."
+  )
+)
+
+kable(
+  beoordeling,
+  caption = "Beoordeling van de transparantiecriteria",
+  align = "l"
+)
+
+```
+Het onderzoek voldoet dus aan de meeste transparantiecriteria's.
+
+# R-code {-}
+
+link naar de code: https://github.com/shuanglinjing/Long-COVID-impact-on-influenza-infectivity-and-fatality/tree/master
+
+Ik vind dit nogal moeilijk, omdat de code anders lijkt dan wat ik geleerd heb. Ik ga dit nog even vragen in de lessen.
 

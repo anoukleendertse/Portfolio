@@ -1,11 +1,9 @@
 ---
-title: "Portfolio"
 author: "Anouk Leendertse"
 site: "bookdown::bookdown_site"
 output:
   bookdown::gitbook: default
 ---
-
 # Portfolio {-}
 
 Welkom bij mijn portfolio!

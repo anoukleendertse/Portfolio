@@ -1,8 +1,5 @@
----
-title: "02-projects"
-output: html_document
----
-
 # Project vrije opdracht {-}
 
-Concrete projecten die je hebt uitgevoerd
+Voor mijn project ga ik machine learning leren en ik heb voor Logistic regression gekozen. Ik ga LR toepassen, eerst op de dataset van Wisconson om het in te stellen en daarna op een onbekende dataset.
+
+Hiervoor moet ik eerst Logistic regression leren te gebruiken vandaar dat ik alvast een begin heb gemaakt voor de code ervan. Zie daarvoor Rmd bestand: 'logistic_regression_leren_kopie.Rmd'. Een kopie hiervan staat in de map bookdown_portfolio.
