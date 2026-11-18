@@ -12,6 +12,8 @@ date: "`r format(Sys.time(), '%B %Y')`"
 output:
   vitae::awesomecv:
     page_total: true
+    show_footer: false
+    font_scale: 0.95
 ---
 
 # Curriculum Vitae {-}
@@ -29,7 +31,10 @@ library(vitae)
 
 My name is Anouk Leendertse, and I am a third-year student of Biology and Medical Laboratory Research at the University of Applied Sciences Utrecht (Hogeschool Utrecht).
 
-Although my educational background is mainly in lab-biology, my main interest lies in data science and data analysis. I enjoy working with data, exploring patterns and using programming tools such as R to analyse and interpret information. I have done some work already in R 
+Although my educational background is mainly in lab-biology, my main interest lies in data science and data analysis. I enjoy working with data, exploring patterns and using programming tools such as R to analyse and interpret information. I have done some work already in R.
+
+I would like to work in a position where I can combine my background in biology with data science and healthcare. I am interested in opportunities within bioinformatics, genomics or healthcare data science, for example at a research institute, university, hospital or biotechnology company. A management function is also something I am interested in and would like to further explore.
+I would enjoy working with large datasets and using programming languages such as R and Python to gain new insights into biological processes and human health.
 
 Alongside my studies, I have gained several years of work experience in retail. These experiences have helped me develop strong communication skills, a sense of responsibility and the ability to work effectively in a team.
 
@@ -57,8 +62,32 @@ education2 <- tibble::tribble(
   "Utrecht, The Netherlands"
 )
 
-knitr::kable(education)
+knitr::kable(education2)
 ```
+
+
+## Technical skills {-}
+
+**Programming and Data Analysis**
+
+- R programming
+- Data processing and statistical analysis
+- Data visualisation
+
+**Bioinformatics**
+
+- Bulk RNA sequencing (RNA-seq)
+- Single-cell RNA sequencing (scRNA-seq)
+- Differential gene expression analysis
+- Gene expression interpretation
+
+**Tools and Packages**
+
+- RStudio
+- Seurat
+- DESeq2
+- ggplot2
+- Microsoft Excel, Word and Teams
 
 ## Work experience {-}
 
@@ -82,19 +111,6 @@ nov. 2025 – Present
 - Supporting daily store operations.
 - Taking initiative and working independently when required.
 - Working efficiently in a team.
-
-## Technical skills {-}
-
-Programming and data analysis
-- Single-cell RNA sequencing (scRNA-seq)
-- R programming
-- Data manipulation and analysis
-- Data visualisation
-Software
-- R
-- Microsoft Excel
-- Microsoft Word
-- Microsoft Office
 
 ## Personal skills {-}
 

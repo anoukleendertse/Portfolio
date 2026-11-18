@@ -24,9 +24,7 @@ Although I already have a good foundation in biological data analysis (R), I wou
 To prepare myself for a future career in data science or bioinformatics, I would like to develop several additional skills:
 
 - Python programming: expanding my programming knowledge beyond R.
-- Machine learning: learning how to apply machine learning techniques to 
-
-biological datasets.
+- Machine learning: learning how to apply machine learning techniques to biological datasets.
 
 - Advanced R programming: writing more efficient and reproducible code.
 - Advanced bioinformatics: gaining more experience with complex biological 
