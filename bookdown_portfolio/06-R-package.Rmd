@@ -1,2 +1,47 @@
 # R-packages {-}
 
+## Mijn uitgevoerde R-package 'studenttools' {-}
+
+<iframe src="ruwe_data/studenttools.html"
+        width="100%"
+        height="600px"
+        frameborder="0">
+</iframe>
+
+## R scripten met functies {-}
+
+#### bereken_gemiddelde {-}
+
+<iframe src="ruwe_data/bereken_gemiddelde.R"
+        width="100%"
+        height="600px"
+        frameborder="0">
+</iframe>
+
+#### bereken_eindcijfer {-}
+
+<iframe src="ruwe_data/bereken_eindcijfer.R"
+        width="100%"
+        height="600px"
+        frameborder="0">
+</iframe>
+
+#### controleer_voldoende {-}
+
+<iframe src="ruwe_data/controleer_voldoende.R"
+        width="100%"
+        height="600px"
+        frameborder="0">
+</iframe>
+
+#### maak_cijferoverzicht {-}
+
+<iframe src="ruwe_data/maak_cijferoverzicht.R"
+        width="100%"
+        height="600px"
+        frameborder="0">
+</iframe>
+
+## Github {-}
+
+Voor de uitgebreide versie verzoek ik u graag om de github repo 'studenttools' te bekijken. (https://github.com/anoukleendertse/studenttools)
