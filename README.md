@@ -35,24 +35,24 @@ bookdown_portfolio/
 
 Het portfolio bestaat uit de volgende onderdelen:
 
-01-CV.Rmd -)                   Curriculum vitae
-02-future-goals.Rmd -)         toekomstige doelen en ambities
-03-vrijeopdr.Rmd -)            Vrije opdracht
-04-data-management.Rmd -)      Opdracht over datamanagement
-05-reproducible-science.Rmd -) Opdracht over reproduceerbare wetenschap
-06-R-package.Rmd -)            Opdracht over R-packages
-07-bronvermelding.Rmd -)       Bronnen en literatuur
+- 01-CV.Rmd -)                   Curriculum vitae
+- 02-future-goals.Rmd -)         toekomstige doelen en ambities
+- 03-vrijeopdr.Rmd -)            Vrije opdracht
+- 04-data-management.Rmd -)      Opdracht over datamanagement
+- 05-reproducible-science.Rmd -) Opdracht over reproduceerbare wetenschap
+- 06-R-package.Rmd -)            Opdracht over R-packages
+- 07-bronvermelding.Rmd -)       Bronnen en literatuur
 
 *BESTANDSBESCHRIJVINGEN*
 
-R Markdown-bestanden (.Rmd): bevatten de hoofdstukken en inhoud van het portfolio.
-index.Rmd: bevat de introductie en vormt het startpunt van het Bookdown-project.
-images/: bevat afbeeldingen die in het portfolio worden gebruikt.
-packages.bib: bevat bibliografische referenties.
-_bookdown.yml: bevat de configuratie en volgorde van de hoofdstukken.
-_output.yml: bevat de instellingen voor de uitvoer van het boek.
-bookdown.Rproj: het RStudio-projectbestand.
-_book/: bevat de gegenereerde HTML-versie van het portfolio.
+- R Markdown-bestanden (.Rmd): bevatten de hoofdstukken en inhoud van het portfolio.
+- index.Rmd: bevat de introductie en vormt het startpunt van het Bookdown-project.
+- images/: bevat afbeeldingen die in het portfolio worden gebruikt.
+- packages.bib: bevat bibliografische referenties.
+- _bookdown.yml: bevat de configuratie en volgorde van de hoofdstukken.
+- _output.yml: bevat de instellingen voor de uitvoer van het boek.
+- bookdown.Rproj: het RStudio-projectbestand.
+- _book/: bevat de gegenereerde HTML-versie van het portfolio.
 
 *HET PORTFOLIO RENDEREN*
 
